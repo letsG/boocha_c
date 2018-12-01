@@ -7,7 +7,7 @@ import Card from '../../components/Card/index';
 import Form from '../../components/Form/index'
 
 import './style.css';
-
+}
 const customModalStyles = {
     content: {
         top: '50%',
@@ -47,29 +47,27 @@ class Dashboard extends Component {
         this.setState({modalIsOpen: false});
     };
     onRegister = () => {
-        console.log('@@@ALO',)
         this.setState({form:'register'});
     };
 
     formData = {
         login: [
-            {'id': 'email', 'type': 'text', 'label': 'E-mail', 'className': 'input'},
-            {'id': 'password', 'type': 'text', 'label': 'Пароль', 'className': 'input'},
-            {'id': 'register', 'type': 'button', 'value': 'Регистрация', 'className': 'input'},
-            {'id': 'login', 'type': 'button', 'value': 'Вход', 'className': 'input'},
+            {'id': 'email', 'type': 'text', 'label': 'E-mail', 'className': 'input', 'required': true},
+            {'id': 'password', 'type': 'text', 'label': 'Пароль', 'className': 'input', 'required': true},
+            {'id': 'register', 'type': 'button', 'value': 'Регистрация', 'className': 'input', 'required': false},
+            {'id': 'login', 'type': 'button', 'value': 'Вход', 'className': 'input', 'required': false},
         ],
         register: [
-            {'id': 'firstName', 'type': 'text', 'label': 'Имя', 'className': 'input'},
-            {'id': 'lastName', 'type': 'text', 'label': 'Фамилия', 'className': 'input'},
-            {'id': 'email', 'type': 'text', 'label': 'E-mail', 'className': 'input'},
-            {'id': 'password', 'type': 'text', 'label': 'Пароль', 'className': 'input'},
-            {'id': 'confirmPassword', 'type': 'text', 'label': 'Повторно пароль', 'className': 'input'},
-            {'id': 'confirmRegister', 'type': 'button', 'value': 'Зарегестрироваться', 'className': 'input'},
+            {'id': 'firstName', 'type': 'text', 'label': 'Имя', 'className': 'input', 'required': true},
+            {'id': 'lastName', 'type': 'text', 'label': 'Фамилия', 'className': 'input', 'required': true},
+            {'id': 'email', 'type': 'text', 'label': 'E-mail', 'className': 'input', 'required': true},
+            {'id': 'password', 'type': 'text', 'label': 'Пароль', 'className': 'input', 'required': true},
+            {'id': 'confirmPassword', 'type': 'text', 'label': 'Повторно пароль', 'className': 'input', 'required': false},
+            {'id': 'confirmRegister', 'type': 'button', 'value': 'Зарегестрироваться', 'className': 'input', 'required': false},
         ],
     };
 
     render() {
-        console.log('@@@STATE', this.state);
         return (
             <div className="dashboard">
                 <Modal
