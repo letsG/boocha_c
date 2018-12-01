@@ -27,8 +27,10 @@ class AddForm extends Component {
         if(id==='confirm'){
             let data = this.data.filter(x => x.type !='button');
             let obj = Object.assign({}, this.state);
-            data.forEach(item => {_id
+            data.forEach(item => {
                if(!obj[item.id]){
+                   let arr = [];
+                   arr.push(item.value);
                    alert('Fill up the fields!');
                    this.setState({state:{}});
                }
