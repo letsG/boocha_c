@@ -25,7 +25,8 @@ class Dashboard extends Component {
     state = {
         data: [],
         modalIsOpen: false,
-        form:'login',
+        form: 'login',
+        formData:{}
     };
 
     componentDidMount() {
@@ -37,6 +38,7 @@ class Dashboard extends Component {
                 console.log(error);
             });
     }
+
     openModal = () => {
         this.setState({modalIsOpen: true});
     };
@@ -44,18 +46,30 @@ class Dashboard extends Component {
     closeModal = () => {
         this.setState({modalIsOpen: false});
     };
+    onRegister = () => {
+        console.log('@@@ALO',)
+        this.setState({form:'register'});
+    };
 
     formData = {
         login: [
-            {'id': 'email', 'type': 'text', 'label': 'Email', 'className': 'input'},
+            {'id': 'email', 'type': 'text', 'label': 'E-mail', 'className': 'input'},
             {'id': 'password', 'type': 'text', 'label': 'Пароль', 'className': 'input'},
             {'id': 'register', 'type': 'button', 'value': 'Регистрация', 'className': 'input'},
             {'id': 'login', 'type': 'button', 'value': 'Вход', 'className': 'input'},
         ],
-        register: [],
+        register: [
+            {'id': 'firstName', 'type': 'text', 'label': 'Имя', 'className': 'input'},
+            {'id': 'lastName', 'type': 'text', 'label': 'Фамилия', 'className': 'input'},
+            {'id': 'email', 'type': 'text', 'label': 'E-mail', 'className': 'input'},
+            {'id': 'password', 'type': 'text', 'label': 'Пароль', 'className': 'input'},
+            {'id': 'confirmPassword', 'type': 'text', 'label': 'Повторно пароль', 'className': 'input'},
+            {'id': 'confirmRegister', 'type': 'button', 'value': 'Зарегестрироваться', 'className': 'input'},
+        ],
     };
 
     render() {
+        console.log('@@@STATE', this.state);
         return (
             <div className="dashboard">
                 <Modal
@@ -67,6 +81,7 @@ class Dashboard extends Component {
                 >
                     <Form data={this.formData[this.state.form]}
                           onRegisterClick={this.onRegister}
+                          value={this.state.formData}
                     />
                 </Modal>
                 <div className="header">

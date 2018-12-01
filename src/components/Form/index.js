@@ -10,7 +10,6 @@ class AddForm extends Component {
     };
     onClick = (e) => {
         let {id} = e.target;
-        console.log('@@@', id)
         let arr = [];
         if (id === 'confirm') {
             let data = this.data.filter(x => x.type !== 'button');
@@ -18,27 +17,25 @@ class AddForm extends Component {
             data.forEach(item => {
                 if (!obj[item.id]) {
                     arr.push(item.label);
-                    console.log('@@@ARRAY', arr)
                 }
             });
             alert('Please fill up the fields ' + arr);
         } else if (id === 'cancel') {
 
         }else if (id === 'register'){
-
+            this.props.onRegisterClick()
         }
-
     };
 
     render() {
-        console.log('@@@', this.props);
         return (
             <form className="form">
                 {this.props.data.map((item, index) => {
                     return <Input data={item}
-                                  key={index}
+                                  key={item.id}
                                   onChange={this.onChange}
                                   onClick={this.onClick}
+                                  value={this.props.value[item.id]}
                     />
                 })}
             </form>
