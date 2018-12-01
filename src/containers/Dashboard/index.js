@@ -63,6 +63,7 @@ class Dashboard extends Component {
                     onRequestClose={this.closeModal}
                     style={customModalStyles}
                     contentLabel="Example Modal"
+                    className="Modal"
                 >
                     <Form data={this.formData[this.state.form]}
                           onRegisterClick={this.onRegister}
