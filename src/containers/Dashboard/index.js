@@ -1,15 +1,29 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom'
+import Modal from 'react-modal';
 
 import Card from '../../components/Card/index';
 
 import './style.css';
 
+const customModalStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)'
+    }
+};
+Modal.setAppElement('#root');
+
 
 class Dashboard extends Component {
     state = {
-        data: []
+        data: [],
+        modalIsOpen: false
     };
 
     componentDidMount() {
@@ -21,10 +35,24 @@ class Dashboard extends Component {
                 console.log(error);
             });
     }
+    openModal = () => {
+        this.setState({modalIsOpen: true});
+    }
+
+    closeModal = () => {
+        this.setState({modalIsOpen: false});
+    }
 
     render() {
         return (
             <div className="dashboard">
+                <Modal
+                    isOpen={this.state.modalIsOpen}
+                    onRequestClose={this.closeModal}
+                    style={customModalStyles}
+                    contentLabel="Example Modal"
+                >
+                </Modal>
                 <div className="header">
                     <div className="buttons">
                         <Link to="/project_add">
@@ -35,7 +63,7 @@ class Dashboard extends Component {
                             СОЗДАТЬ ПРОЕКТ
                         </span>
                         </Link>
-                        <Link to="/login">
+                        <Link to="#" onClick={this.openModal}>
                             <span id='login'>
                                 <i className="material-icons">
                                     perm_identity

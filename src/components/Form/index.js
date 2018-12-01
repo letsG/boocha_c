@@ -3,50 +3,38 @@ import Input from '../../components/Input/index'
 
 
 class AddForm extends Component {
-    state = {
-
-    };
-    data = [
-        {'id': 'author', 'type': 'text', 'label': 'Автор проекта', 'className': 'input'},
-        {'id': 'phone', 'type': 'text', 'label': 'Номер телефона', 'className': 'input'},
-        {'id': 'vk', 'type': 'text', 'label': 'Вконтакте', 'className': 'input'},
-        {'id': 'instagram', 'type': 'text', 'label': 'Инстаграм', 'className': 'input'},
-        {'id': 'productName', 'type': 'text', 'label': 'Название преокта', 'className': 'input'},
-        {'id': 'amount', 'type': 'text', 'label': 'Сумма', 'className': 'input'},
-        {'id': 'productDescription', 'type': 'textarea', 'label': 'Описание проекта', 'className': 'input'},
-        {'id': 'confirm', 'type': 'button', 'label': null, 'className': 'input', 'value': 'Сохранить'},
-        {'id': 'cancel', 'type': 'button', 'label': null, 'className': 'input', 'value': 'Отмена'},
-        // {'id': 'formLink', 'type': 'text', 'label': 'Код формы'},
-    ];
+    state = {};
     onChange = (e) => {
         let {id, value} = e.target;
-        this.setState({...this.state, [id]:value})
+        this.setState({...this.state, [id]: value})
     };
     onClick = (e) => {
         let {id} = e.target;
-        if(id==='confirm'){
+        let arr = [];
+        if (id === 'confirm') {
             let data = this.data.filter(x => x.type !== 'button');
             let obj = Object.assign({}, this.state);
             data.forEach(item => {
-               if(!obj[item.id]){
-                   let arr = [];
-                   arr.push(item.value);
-                   alert('Fill up the fields!');
-                   this.setState({state:{}});
-               }
+                if (!obj[item.id]) {
+                    arr.push(item.label);
+                    console.log('@@@ARRAY', arr)
+                }
             });
-            console.log('@@@OBJECT',obj);
-            console.log('@@@', data)
-        }else if(id==='cancel'){
+            alert('Please fill up the fields ' + arr);
+        } else if (id === 'cancel') {
 
-        }else {}
+        }else {
+
+        }
+
     };
 
     render() {
-        console.log('@@@',this.state);
+
+        console.log('@@@', this.props);
         return (
             <form className="form">
-                {this.data.map((item, index) => {
+                {this.props.data.map((item, index) => {
                     return <Input data={item}
                                   key={index}
                                   onChange={this.onChange}
