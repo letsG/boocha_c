@@ -1,0 +1,57 @@
+.dashboard {
+  font-family: "Fira Sans", serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; }
+  .dashboard .header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px; }
+    .dashboard .header .buttons {
+      display: flex;
+      margin-right: 5%; }
+      .dashboard .header .buttons a {
+        text-decoration: none;
+        color: black; }
+        .dashboard .header .buttons a span {
+          cursor: pointer;
+          position: relative;
+          align-self: baseline;
+          margin-left: 35px;
+          font-size: 12px;
+          font-weight: bold; }
+          .dashboard .header .buttons a span i {
+            position: absolute;
+            left: -30px;
+            top: -6px; }
+  .dashboard .content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    overflow-y: auto; }
+    .dashboard .content .content-filter {
+      display: flex;
+      flex-direction: row;
+      align-self: flex-start;
+      justify-self: flex-start; }
+      .dashboard .content .content-filter p {
+        margin-left: 20px;
+        font-size: 24pxscroll;
+        color: #011627; }
+    .dashboard .content .cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      min-height: 75%; }
+  .dashboard .footer {
+    display: flex;
+    margin-top: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25% 30px; }
+    .dashboard .footer span {
+      font-weight: normal;
+      line-height: normal;
+      font-size: 12px;
+      color: #011627; }

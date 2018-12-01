@@ -1,0 +1,69 @@
+.dashboard{
+  font-family: "Fira Sans", serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .header{
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+    .buttons{
+      display: flex;
+      margin-right: 5%;
+      a{
+        text-decoration: none;
+        color: black;
+        span{
+          cursor: pointer;
+          position: relative;
+          align-self: baseline;
+          margin-left: 35px;
+          font-size: 12px;
+          font-weight: bold;
+          i{
+            position:absolute;
+            left: -30px;
+            top: -6px;
+          }
+        }
+      }
+    }
+  }
+  .content{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    overflow-y: auto;
+    .content-filter{
+      display: flex;
+      flex-direction: row;
+      align-self: flex-start;
+      justify-self: flex-start;
+      p{
+        margin-left: 20px;
+        font-size: 24pxscroll;
+        color: #011627;
+      }
+    }
+    .cards{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      min-height: 75%;
+    }
+  }
+  .footer{
+    display: flex;
+    margin-top: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25% 30px;
+    span{
+      font-weight: normal;
+      line-height: normal;
+      font-size: 12px;
+      color: #011627;
+    }
+  }
+}
