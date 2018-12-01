@@ -25,7 +25,7 @@ class AddForm extends Component {
     onClick = (e) => {
         let {id} = e.target;
         if(id==='confirm'){
-            let data = this.data.filter(x => x.type !='button');
+            let data = this.data.filter(x => x.type !== 'button');
             let obj = Object.assign({}, this.state);
             data.forEach(item => {
                if(!obj[item.id]){

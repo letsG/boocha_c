@@ -13,7 +13,7 @@ class Dashboard extends Component {
     };
 
     componentDidMount() {
-        axios.get('http://138.68.156.250/api/v1/projects')
+        axios.get('https://c.boocha.io/api/v1/projects')
             .then((response) => {
                 this.setState({data: response.data._items})
             })
