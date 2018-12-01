@@ -10,6 +10,7 @@ class AddForm extends Component {
     };
     onClick = (e) => {
         let {id} = e.target;
+        console.log('@@@', id)
         let arr = [];
         if (id === 'confirm') {
             let data = this.data.filter(x => x.type !== 'button');
@@ -23,14 +24,13 @@ class AddForm extends Component {
             alert('Please fill up the fields ' + arr);
         } else if (id === 'cancel') {
 
-        }else {
+        }else if (id === 'register'){
 
         }
 
     };
 
     render() {
-
         console.log('@@@', this.props);
         return (
             <form className="form">

@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import Modal from 'react-modal';
 
 import Card from '../../components/Card/index';
+import Form from '../../components/Form/index'
 
 import './style.css';
 
@@ -14,7 +15,7 @@ const customModalStyles = {
         right: 'auto',
         bottom: 'auto',
         marginRight: '-50%',
-        transform: 'translate(-50%, -50%)'
+        transform: 'translate(-50%, -50%)',
     }
 };
 Modal.setAppElement('#root');
@@ -23,7 +24,8 @@ Modal.setAppElement('#root');
 class Dashboard extends Component {
     state = {
         data: [],
-        modalIsOpen: false
+        modalIsOpen: false,
+        form:'login',
     };
 
     componentDidMount() {
@@ -37,11 +39,21 @@ class Dashboard extends Component {
     }
     openModal = () => {
         this.setState({modalIsOpen: true});
-    }
+    };
 
     closeModal = () => {
         this.setState({modalIsOpen: false});
-    }
+    };
+
+    formData = {
+        login: [
+            {'id': 'email', 'type': 'text', 'label': 'Email', 'className': 'input'},
+            {'id': 'password', 'type': 'text', 'label': 'Пароль', 'className': 'input'},
+            {'id': 'register', 'type': 'button', 'value': 'Регистрация', 'className': 'input'},
+            {'id': 'login', 'type': 'button', 'value': 'Вход', 'className': 'input'},
+        ],
+        register: [],
+    };
 
     render() {
         return (
@@ -52,6 +64,9 @@ class Dashboard extends Component {
                     style={customModalStyles}
                     contentLabel="Example Modal"
                 >
+                    <Form data={this.formData[this.state.form]}
+                          onRegisterClick={this.onRegister}
+                    />
                 </Modal>
                 <div className="header">
                     <div className="buttons">
