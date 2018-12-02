@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Input from '../../components/Input/index'
 import axios from 'axios';
 
+let arr = [];
 
 class AddForm extends Component {
     fieldsCheck = () => {
@@ -21,7 +22,6 @@ class AddForm extends Component {
     onClick = (e) => {
         let {id} = e.target;
         console.log('@@@', id);
-        let arr = [];
         if (id === 'confirm') {
             alert('Please fill up the fields ' + arr);
         } else if (id === 'cancel') {
