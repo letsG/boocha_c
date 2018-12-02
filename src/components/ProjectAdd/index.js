@@ -1,15 +1,15 @@
 import React from 'react';
 import Form from '../../components/Form/index'
-
+import '../ProjectAdd/style.css'
 const ProjectAdd = () => {
    const data = [
-        {'id': 'author', 'type': 'text', 'label': 'Автор проекта', 'className': 'input author', 'required': true},
+        {'id': 'author', 'type': 'text', 'label': 'Автор', 'className': 'input author', 'required': true},
         {'id': 'phone', 'type': 'text', 'label': 'Номер телефона', 'className': 'input phone', 'required': true},
         {'id': 'vk', 'type': 'text', 'label': 'Вконтакте', 'className': 'input vk', 'required': true},
-        {'id': 'instagram', 'type': 'text', 'label': 'Инстаграм', 'className': 'input instagram'},
-        {'id': 'productName', 'type': 'text', 'label': 'Название преокта', 'className': 'input productName', 'required': true},
+        {'id': 'productName', 'type': 'text', 'label': 'Название проекта', 'className': 'input productName', 'required': true},
         {'id': 'amount', 'type': 'text', 'label': 'Сумма', 'className': 'input amount', 'required': true},
         {'id': 'productDescription', 'type': 'textarea', 'label': 'Описание проекта', 'className': 'input productDescription', 'required': true},
+        {'id': 'codeform', 'type': 'textarea', 'label': 'Код формы', 'className': 'input codeform', 'required': true},
         {'id': 'confirm', 'type': 'button', 'label': null, 'className': 'button confirm', 'value': 'Сохранить', 'required': false},
         {'id': 'cancel', 'type': 'button', 'label': null, 'className': 'button cancel', 'value': 'Отмена', 'required': false},
         // {'id': 'formLink', 'type': 'text', 'label': 'Код формы'},

@@ -1,0 +1,89 @@
+.project-add{
+    padding-left: 200px;
+h1{
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    font-size: 48px;
+    color: #011627;
+    text-shadow: 3px 4px 4px #06D6A0;
+}
+h6{
+font-family: Fira Sans;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+font-size: 16px;
+color: #011627;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+p{
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+width: 700px;
+height: 42px;
+margin-bottom: 30px;
+}
+#author, #vk, #productName{
+        width: 58%;
+        height: 30px;
+        border: 1px solid #06D6A0;
+        box-sizing: border-box;
+        border: 1px solid rgba(1, 22, 39, 0.5);
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+      #phone, #amount{
+        width: 25%;
+        height: 30px;
+        border: 1px solid #06D6A0;
+        box-sizing: border-box;
+        border: 1px solid rgba(1, 22, 39, 0.5);
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+      #productDescription,#codeform{
+        width: 58%;
+        height: 150px;
+        border: 1px solid #06D6A0;
+        box-sizing: border-box;
+        border: 1px solid rgba(1, 22, 39, 0.5);
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+      #confirm{
+        width: 58%;
+        height: 44px;
+        font-family: Fira Sans;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        font-size: 14px;
+        text-align: center;
+        
+        color: #06D6A0;
+        background: #011627;
+        border-radius: 10px;
+      }
+      #cancel{
+        width: 58%;
+        height: 44px;
+        font-family: Fira Sans;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        font-size: 14px;
+        text-align: center;
+        
+        color: black;
+        background: white;
+        border: 2px solid #06D6A0;
+border-radius: 10px;
+        margin-bottom: 30px;
+      }
+}

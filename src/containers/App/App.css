@@ -10,56 +10,88 @@
   border-radius: 15px;
   padding-left: 80px;
   padding-right: 80px;
-  box-shadow: 3px 4px 10px rgba(1, 22, 39, 0.5); }
-  .Modal h1 {
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
-    font-family: Fira Sans;
-    font-style: normal;
-    font-weight: bold;
-    line-height: normal;
-    font-size: 36px;
-    margin-top: 60px; }
-  .Modal h6 {
-    font-family: Fira Sans;
-    font-style: normal;
-    font-weight: bold;
-    line-height: normal;
-    font-size: 18px;
-    color: #011627;
-    margin-top: 10px;
-    margin-bottom: 10px; }
-  .Modal .form {
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
-    width: 100%; }
-    .Modal .form .input input {
-      width: 100%;
-      height: 30px;
-      border: 1px solid #06D6A0;
-      box-sizing: border-box;
-      border-radius: 10px;
-      background-color: #F2F2F2;
-      margin-bottom: 10px; }
-      .Modal .form .input input:focus {
-        background-color: white; }
-    .Modal .form .input #register {
-      font-family: Fira Sans;
-      font-style: normal;
-      font-weight: bold;
-      line-height: normal;
-      margin-top: 100px;
-      margin-bottom: 10px;
-      background: #06D6A0;
-      color: white; }
-    .Modal .form .input #login {
-      font-family: Fira Sans;
-      font-style: normal;
-      font-weight: bold;
-      line-height: normal; }
-    .Modal .form .input #confirmRegister {
-      background: #06D6A0;
-      color: white;
-      margin-top: 20px; }
+  -webkit-box-shadow: 3px 4px 10px rgba(1, 22, 39, 0.5);
+          box-shadow: 3px 4px 10px rgba(1, 22, 39, 0.5);
+}
+
+.Modal h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 36px;
+  margin-top: 60px;
+}
+
+.Modal h6 {
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 18px;
+  color: #011627;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Modal .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 100%;
+}
+
+.Modal .form .input input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #06D6A0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #F2F2F2;
+  margin-bottom: 10px;
+}
+
+.Modal .form .input input:focus {
+  background-color: white;
+}
+
+.Modal .form .input #register {
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  background: #06D6A0;
+  color: white;
+}
+
+.Modal .form .input #login {
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+}
+
+.Modal .form .input #confirmRegister {
+  background: #06D6A0;
+  color: white;
+  margin-top: 20px;
+}
+/*# sourceMappingURL=App.css.map */
