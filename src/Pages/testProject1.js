@@ -1,28 +1,26 @@
 import React from 'react';
-import Preview from '../Assets/img/project2.png'
-
+import Project1 from '../Assets/img/project1.png'
+import Leonov from '../Assets/img/leonov.jpg'
+import '../Pages/style.css'
 const testPage = () => {
     return (
         <div className="testPage">
-            <h1>Создание стрит арт рисунка на Толбухина 8</h1>
+        <span class="close"></span>
+            <h1>Tagan</h1>
             <h2>О проекте</h2>
-            <span>
-                — Очевидно, что если Пример 1 можно было безболезненно описать простым текстом, то Пример 2 намного лучше воспринимается в виде сценария.
-                Но если у вас вся функциональность описана в виде юзкейсов, то лучше описывать юзкейсами даже очень простые сценарии, из пары шагов. Пусть ваша спецификация будет в едином стиле.
-                — Используйте минимальное количество слов и пунктов, необходимых для однозначного понимания сценария. Если юзкейс получается слишком длинный, возможно, лучше будет разбить его на несколько.
-                С очень длинными сценариями, с большим количеством расширений, работать крайне неудобно.
-            </span>
-            <img src={Preview} alt="image"/>
+            <div className="about"><span>
+            Проект позволяет узнавать онлайн о городских проблемах и писать об этом в соц. сетях. Благодаря разработке каждый может узнать о том, что произошло в конкретной части города, отследить загруженности трасс и другие важные моменты жизни в Таганроге.
+            </span></div>
+            <img src={Project1} alt="image" width="780px"/><div className="payment">
             <iframe
-                src="https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=Тест&targets-hint=&default-sum=&button-text=14&hint=&successURL=&quickpay=shop&account=410018036024265"
+                src="https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=Перевести на развитие проекта&targets-hint=&default-sum=&button-text=14&hint=&successURL=&quickpay=shop&account=410018036024265"
                 width="423" height="222" frameBorder="0" allowTransparency="true" scrolling="no">
-            </iframe>
-            <div className="author-preview">
-                <img className='avatar' alt='avatar'/>
+            </iframe></div>
+            <div className="avatar">
+                <img src={Leonov} alt="image" width="220px" height="300px"/></div>
                 <div className="author">
-                    <p className="name"> Никита Сомов </p>
-                    <p className="description"> Стрит арт художник </p>
-                </div>
+                    <p className="name">Никита Леонов</p>
+                    <p className="description">Разработчик</p>
             </div>
         </div>
     )
