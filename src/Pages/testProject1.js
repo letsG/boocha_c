@@ -2,10 +2,11 @@ import React from 'react';
 import Project1 from '../Assets/img/project1.png'
 import Leonov from '../Assets/img/leonov.jpg'
 import '../Pages/style.css'
+import {Link} from 'react-router-dom'
 const testPage = () => {
     return (
         <div className="testPage">
-        <span class="close"></span>
+            <Link to={'/'}><span className="close"></span></Link>
             <h1>Tagan</h1>
             <h2>О проекте</h2>
             <div className="about"><span>

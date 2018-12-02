@@ -35,3 +35,7 @@
     margin: 0;
     font-size: 9px;
     color: #F2F2F2; }
+  .card a {
+    color: white; }
+    .card a:hover {
+      color: #06D6A0; }

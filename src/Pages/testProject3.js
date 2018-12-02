@@ -1,9 +1,11 @@
 import React from 'react';
 import Preview from '../Assets/img/preview.png'
+import {Link} from "react-router-dom";
 
 const testPage = () => {
     return (
         <div className="testPage">
+            <Link to={'/'}><span className="close"></span></Link>
             <h1>Создание стрит арт рисунка на Толбухина 8</h1>
             <h2>О проекте</h2>
             <span>

@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import Input from '../../components/Input/index'
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 import setAuthToken from '../../utils/setAuthToken';
 
 let arr = [];
+
 
 class AddForm extends Component {
     fieldsCheck = () => {
@@ -17,9 +19,11 @@ class AddForm extends Component {
         });
         if (arr.length) {
             alert('Please fill up the fields ' + arr);
+            arr = [];
             return false;
         } else {
             return true;
+            arr = [];
         }
     };
     state = {};
@@ -31,35 +35,36 @@ class AddForm extends Component {
         let {id} = e.target;
         if (id === 'confirm') {
             if (this.fieldsCheck()) {
-                let data =
-                    {
-                        "name": "string",
-                        "description": "string",
-                        "first_name": "string",
-                        "owner": "string",
-                        "phone": "string",
-                        "social": {
-                            "vk": "string",
-                            "insta": "string"
-                        },
-                        "goal": 0,
-                        "photos": [],
-                        "user": "string",
-                        "payment_form": "string",
-                        "status": "moderation",
-                        "transactions": [],
-                        "_id": "string"
-                    }
-                axios.post('https://c.boocha.io/api/v1/projects', data)
-                    .then((response) => {
-                        this.props.closeModal();
-                        console.log('@@@', response);
-                    })
-                    .catch(function (error) {
-                        alert('Please login')
-                    });
+                // let data =
+                //     {
+                //         "name": "string",
+                //         "description": "string",
+                //         "first_name": "string",
+                //         "owner": "string",
+                //         "phone": "string",
+                //         "social": {
+                //             "vk": "string",
+                //             "insta": "string"
+                //         },
+                //         "goal": 0,
+                //         "photos": [],
+                //         "user": "string",
+                //         "payment_form": "string",
+                //         "status": "moderation",
+                //         "transactions": [],
+                //         "_id": "string"
+                //     }
+                // axios.post('https://c.boocha.io/api/v1/projects', data)
+                //     .then((response) => {
+                //         this.props.closeModal();
+                //         console.log('@@@', response);
+                //     })
+                //     .catch(function (error) {
+                //         alert('Please login')
+                //     });
             }
         } else if (id === 'cancel') {
+            return
 
         } else if (id === 'register') {
             this.props.onRegisterClick();
@@ -73,7 +78,6 @@ class AddForm extends Component {
                 axios.post('https://c.boocha.io/api/v1/auth/sign-in', data)
                     .then((response) => {
                         this.props.closeModal();
-                        console.log('@@@', response);
                         setAuthToken(response.data.access_token);
                         alert('Login completed');
                     })
@@ -92,12 +96,12 @@ class AddForm extends Component {
                     };
                 axios.post('https://c.boocha.io/api/v1/auth/sign-up', data)
                     .then((response) => {
-                        console.log('@@@RESOPONSE', response);
+                        //console.log('@@@RESOPONSE', response);
                         this.props.closeModal();
                         alert('Register completed! Please login');
                     })
                     .catch(function (error) {
-                        console.log('@@@ERROR', error);
+                        //console.log('@@@ERROR', error);
                         alert('Bad credentials')
                     });
             }
@@ -108,12 +112,25 @@ class AddForm extends Component {
         return (
             <form className="form">
                 {this.props.data.map((item) => {
-                    return <Input data={item}
-                                  key={item.id}
-                                  onChange={this.onChange}
-                                  onClick={this.onClick}
-                                  value={item.value}
-                    />
+                    return (
+                        item.id === 'confirm' || item.id === 'cancel' ?
+                            <Link to={'/'}>
+                                <Input data={item}
+                                       key={item.id}
+                                       onChange={this.onChange}
+                                       onClick={this.onClick}
+                                       value={item.value}
+                                />
+                            </Link> :
+                            <Input data={item}
+                                   key={item.id}
+                                   onChange={this.onChange}
+                                   onClick={this.onClick}
+                                   value={item.value}
+                            />
+                    )
+
+
                 })}
             </form>
         )

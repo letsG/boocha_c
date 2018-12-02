@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom'
 import Modal from 'react-modal';
+import { push } from 'react-router-redux'
 
 import Card from '../../components/Card/index';
 import Form from '../../components/Form/index'
@@ -35,7 +36,7 @@ class Dashboard extends Component {
                 this.setState({data: response.data._items})
             })
             .catch(function (error) {
-                console.log(error);
+                //console.log(error);
             });
     }
 
@@ -68,7 +69,6 @@ class Dashboard extends Component {
     };
 
     render() {
-        console.log('@@@', localStorage)
         return (
             <div className="dashboard">
                 <Modal

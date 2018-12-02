@@ -40,4 +40,10 @@
     font-size: 9px;
     color: #F2F2F2;
   }
+  a{
+    color: white;
+    &:hover{
+      color: #06D6A0 ;
+    }
+  }
 }

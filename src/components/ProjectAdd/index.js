@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from '../../components/Form/index'
 import '../ProjectAdd/style.css'
+import {Link} from "react-router-dom";
 const ProjectAdd = () => {
    const data = [
         {'id': 'author', 'type': 'text', 'label': 'Автор', 'className': 'input author', 'required': true},
@@ -16,7 +17,7 @@ const ProjectAdd = () => {
     ];
     return (
         <div className="project-add">
-        <span class="close"></span>
+            <Link to={'/'}><span className="close"></span></Link>
             <h1>Создать проект</h1>
             <p>
                 Опишите себя и проект. Чем ярче и понятнее у вас получиться представить проект, тем вероятность
