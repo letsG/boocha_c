@@ -31,7 +31,37 @@ class AddForm extends Component {
         let {id} = e.target;
         if (id === 'confirm') {
             if (this.fieldsCheck()) {
-                //push to api
+                let data =
+                    {
+                        "name": "string",
+                        "description": "string",
+                        "first_name": "string",
+                        "owner": "string",
+                        "phone": "string",
+                        "social": {
+                            "vk": "string",
+                            "insta": "string"
+                        },
+                        "goal": 0,
+                        "photos": [
+                            "string"
+                        ],
+                        "user": "string",
+                        "payment_form": "string",
+                        "status": "moderation",
+                        "transactions": [
+                            "string"
+                        ],
+                        "_id": "string"
+                    }
+                axios.post('https://c.boocha.io/api/v1/projects', data)
+                    .then((response) => {
+                        this.props.closeModal();
+                        console.log('@@@', response);
+                    })
+                    .catch(function (error) {
+                        alert('Please login')
+                    });
             }
         } else if (id === 'cancel') {
 
