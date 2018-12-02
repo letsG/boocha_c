@@ -63,8 +63,7 @@ class Dashboard extends Component {
             {'id': 'lastName', 'type': 'text', 'label': 'Фамилия', 'className': 'input last-name', 'required': true},
             {'id': 'email', 'type': 'text', 'label': 'E-mail', 'className': 'input email', 'required': true},
             {'id': 'password', 'type': 'text', 'label': 'Пароль', 'className': 'input password', 'required': true},
-            {'id': 'confirmPassword', 'type': 'text', 'label': 'Повторно пароль', 'className': 'input password-confirm', 'required': false},
-            {'id': 'confirmRegister', 'type': 'button', 'value': 'Зарегестрироваться', 'className': 'button confirm', 'required': false},
+            {'id': 'confirmRegister', 'type': 'button', 'value': 'Зарегистрироваться', 'className': 'button confirm', 'required': false},
         ],
     };
 
