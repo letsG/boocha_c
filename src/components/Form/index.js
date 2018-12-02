@@ -29,8 +29,8 @@ class AddForm extends Component {
         }else if (id === 'login'){
             let data =
                 {
-                    "email": this.state.email.toString(),
-                    "password": this.state.password.toString(),
+                    "email": this.state.email ? this.state.email.toString() : '',
+                    "password": this.state.password ? this.state.password.toString() : ''
                 };
             console.log('@@@DATA', data);
             axios.post('https://c.boocha.io/api/v1/auth/sign-in', data)
@@ -45,8 +45,8 @@ class AddForm extends Component {
                 {
                     "email": this.state.email ? this.state.email.toString() : '',
                     "password": this.state.password ? this.state.password.toString() : '',
-                    "first_name": this.state.firstName.toString(),
-                    "last_name": this.state.lastName.toString()
+                    "first_name": this.state.firstName ? this.state.firstName.toString() : '',
+                    "last_name": this.state.lastName ? this.state.lastName.toString(): ''
                 };
             axios.post('https://c.boocha.io/api/v1/auth/sign-up', data)
                 .then((response) => {

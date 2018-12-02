@@ -12,6 +12,7 @@ const Input = (props) => {
                     ? <textarea id={props.data.id}
                                 onChange={props.onChange}
                                 placeholder={props.data.placeholder}
+                                className={props.data.className}
 
                     />
                     : <input type={props.data.type}
@@ -20,6 +21,7 @@ const Input = (props) => {
                              placeholder={props.data.placeholder}
                              value={props.data.value}
                              onClick={props.onClick}
+                             className={props.data.className}
                     />
             }
         </div>

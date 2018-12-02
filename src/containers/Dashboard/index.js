@@ -7,7 +7,7 @@ import Card from '../../components/Card/index';
 import Form from '../../components/Form/index'
 
 import './style.css';
-}
+
 const customModalStyles = {
     content: {
         top: '50%',
@@ -40,6 +40,7 @@ class Dashboard extends Component {
     }
 
     openModal = () => {
+        this.setState({form: 'login'});
         this.setState({modalIsOpen: true});
     };
 
@@ -52,18 +53,18 @@ class Dashboard extends Component {
 
     formData = {
         login: [
-            {'id': 'email', 'type': 'text', 'label': 'E-mail', 'className': 'input', 'required': true},
-            {'id': 'password', 'type': 'text', 'label': 'Пароль', 'className': 'input', 'required': true},
-            {'id': 'register', 'type': 'button', 'value': 'Регистрация', 'className': 'input', 'required': false},
-            {'id': 'login', 'type': 'button', 'value': 'Вход', 'className': 'input', 'required': false},
+            {'id': 'email', 'type': 'text', 'label': 'E-mail', 'className': 'input email', 'required': true},
+            {'id': 'password', 'type': 'text', 'label': 'Пароль', 'className': 'input password', 'required': true},
+            {'id': 'register', 'type': 'button', 'value': 'Регистрация', 'className': 'button register', 'required': false},
+            {'id': 'login', 'type': 'button', 'value': 'Вход', 'className': 'button login', 'required': false},
         ],
         register: [
-            {'id': 'firstName', 'type': 'text', 'label': 'Имя', 'className': 'input', 'required': true},
-            {'id': 'lastName', 'type': 'text', 'label': 'Фамилия', 'className': 'input', 'required': true},
-            {'id': 'email', 'type': 'text', 'label': 'E-mail', 'className': 'input', 'required': true},
-            {'id': 'password', 'type': 'text', 'label': 'Пароль', 'className': 'input', 'required': true},
-            {'id': 'confirmPassword', 'type': 'text', 'label': 'Повторно пароль', 'className': 'input', 'required': false},
-            {'id': 'confirmRegister', 'type': 'button', 'value': 'Зарегестрироваться', 'className': 'input', 'required': false},
+            {'id': 'firstName', 'type': 'text', 'label': 'Имя', 'className': 'input first-name', 'required': true},
+            {'id': 'lastName', 'type': 'text', 'label': 'Фамилия', 'className': 'input last-name', 'required': true},
+            {'id': 'email', 'type': 'text', 'label': 'E-mail', 'className': 'input email', 'required': true},
+            {'id': 'password', 'type': 'text', 'label': 'Пароль', 'className': 'input password', 'required': true},
+            {'id': 'confirmPassword', 'type': 'text', 'label': 'Повторно пароль', 'className': 'input password-confirm', 'required': false},
+            {'id': 'confirmRegister', 'type': 'button', 'value': 'Зарегестрироваться', 'className': 'button confirm', 'required': false},
         ],
     };
 
@@ -74,7 +75,6 @@ class Dashboard extends Component {
                     isOpen={this.state.modalIsOpen}
                     onRequestClose={this.closeModal}
                     style={customModalStyles}
-                    contentLabel="Example Modal"
                     className="Modal"
                 >
                     <Form data={this.formData[this.state.form]}
