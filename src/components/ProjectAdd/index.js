@@ -16,6 +16,7 @@ const ProjectAdd = () => {
     ];
     return (
         <div className="project-add">
+        <span class="close"></span>
             <h1>Создать проект</h1>
             <p>
                 Опишите себя и проект. Чем ярче и понятнее у вас получиться представить проект, тем вероятность
