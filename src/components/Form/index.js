@@ -4,6 +4,15 @@ import axios from 'axios';
 
 
 class AddForm extends Component {
+    fieldsCheck = () => {
+        let data = this.props.data.filter(x => x.type !== 'button' && x.required);
+        let obj = Object.assign({}, this.state);
+        data.forEach(item => {
+            if (!obj[item.id]) {
+                arr.push(item.label);
+            }
+        });
+    };
     state = {};
     onChange = (e) => {
         let {id, value} = e.target;
@@ -14,19 +23,12 @@ class AddForm extends Component {
         console.log('@@@', id);
         let arr = [];
         if (id === 'confirm') {
-            let data = this.props.data.filter(x => x.type !== 'button' && x.required);
-            let obj = Object.assign({}, this.state);
-            data.forEach(item => {
-                if (!obj[item.id]) {
-                    arr.push(item.label);
-                }
-            });
             alert('Please fill up the fields ' + arr);
         } else if (id === 'cancel') {
 
-        }else if (id === 'register'){
+        } else if (id === 'register') {
             this.props.onRegisterClick()
-        }else if (id === 'login'){
+        } else if (id === 'login') {
             let data =
                 {
                     "email": this.state.email ? this.state.email.toString() : '',
@@ -40,13 +42,13 @@ class AddForm extends Component {
                 .catch(function (error) {
                     console.log('@@@ERROR', error.response)
                 });
-        }else if (id === 'confirmRegister'){
+        } else if (id === 'confirmRegister') {
             let data =
                 {
                     "email": this.state.email ? this.state.email.toString() : '',
                     "password": this.state.password ? this.state.password.toString() : '',
                     "first_name": this.state.firstName ? this.state.firstName.toString() : '',
-                    "last_name": this.state.lastName ? this.state.lastName.toString(): ''
+                    "last_name": this.state.lastName ? this.state.lastName.toString() : ''
                 };
             axios.post('https://c.boocha.io/api/v1/auth/sign-up', data)
                 .then((response) => {
@@ -59,7 +61,7 @@ class AddForm extends Component {
     };
 
     render() {
-        console.log('@@@',this.state)
+        console.log('@@@', this.state)
         return (
             <form className="form">
                 {this.props.data.map((item) => {

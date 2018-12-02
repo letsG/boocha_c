@@ -77,6 +77,7 @@ class Dashboard extends Component {
                     style={customModalStyles}
                     className="Modal"
                 >
+                    {this.state.form === 'login' ? <h1>Вход в систему</h1> : <h1>Регистрация</h1> }
                     <Form data={this.formData[this.state.form]}
                           onRegisterClick={this.onRegister}
                           value={this.state.formData}
