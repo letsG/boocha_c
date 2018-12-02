@@ -1,9 +1,11 @@
 import React from 'react';
-import Preview from '../Assets/img/preview.png'
+import Project2 from '../Assets/img/project2.png'
+import Nosov from '../Assets/img/nosov.jpg'
 import '../Pages/style.css'
 const testPage = () => {
     return (
         <div className="testPage">
+        <span class="close"></span>
             <h1>ETraffic</h1>
             <h2>О проекте</h2>
             <div className="about"><span>
@@ -13,17 +15,16 @@ const testPage = () => {
 
 Управляющие компании смогут отслеживать статистику заработка по каждому из маршрутов и заработка в общем, а также создавать QR-коды.
             </span></div>
-            <img src={Preview} alt="image"/>
+            <img src={Project2} alt="image" width="780px"/><div className="payment">
             <iframe
-                src="https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=Тест&targets-hint=&default-sum=&button-text=14&hint=&successURL=&quickpay=shop&account=410018036024265"
+                src="https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=Перевести на развитие проекта&targets-hint=&default-sum=&button-text=14&hint=&successURL=&quickpay=shop&account=410018036024265"
                 width="423" height="222" frameBorder="0" allowTransparency="true" scrolling="no">
-            </iframe>
-            <div className="author-preview">
-                <img className='avatar' alt='avatar'/>
+            </iframe></div>
+            <div className="avatar">
+                <img src={Nosov} alt="image" width="250px" height="250px"/></div>
                 <div className="author">
-                    <p className="name"> Никита Сомов </p>
-                    <p className="description"> Стрит арт художник </p>
-                </div>
+                    <p className="name">Сергей Носов</p>
+                    <p className="description">Разработчик</p>
             </div>
         </div>
     )

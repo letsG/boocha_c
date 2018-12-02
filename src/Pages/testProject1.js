@@ -1,5 +1,5 @@
 import React from 'react';
-import Preview from '../Assets/img/preview.png'
+import Preview from '../Assets/img/project2.png'
 
 const testPage = () => {
     return (
