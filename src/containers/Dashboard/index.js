@@ -118,6 +118,7 @@ class Dashboard extends Component {
                             return (
                                 <Card key={index}
                                       data={this.state.data[index]}
+                                      index={index+1}
                                 />
                             )
                         })}

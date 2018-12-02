@@ -6,7 +6,10 @@ import Dashboard from '../../containers/Dashboard/index'
 import ProjectAdd from '../../components/ProjectAdd/index'
 import {getStorageItem} from '../../utils/localStorage';
 import setAuthToken from '../../utils/setAuthToken';
+import testProject1 from '../../Pages/testProject1';
 import testProject2 from '../../Pages/testProject2';
+import testProject3 from '../../Pages/testProject3';
+import testProject4 from '../../Pages/testProject4';
 
 import './App.css';
 
@@ -39,7 +42,10 @@ class App extends Component {
                 <div className='main'>
                     <Switch>
                         <Route exact path='/' component={Dashboard}/>
+                        <Route exact path='/project1' component={testProject1}/>
                         <Route exact path='/project2' component={testProject2}/>
+                        <Route exact path='/project3' component={testProject3}/>
+                        <Route exact path='/project4' component={testProject4}/>
                         <Route exact path='/project_add' component={ProjectAdd}/>
                     </Switch>
                 </div>
