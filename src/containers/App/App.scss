@@ -45,7 +45,7 @@
         box-sizing: border-box;
         border-radius: 10px;
         background-color: #F2F2F2;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         &:focus{
           background-color: white;
         }
@@ -55,7 +55,7 @@
         font-style: normal;
         font-weight: bold;
         line-height: normal;
-        margin-top: 50px;
+        margin-top: 100px;
         margin-bottom: 10px;
         background: #06D6A0;
         color: white;
@@ -69,6 +69,7 @@
       #confirmRegister{
         background: #06D6A0;
         color: white;
+        margin-top: 20px;
       }
     }
   }
