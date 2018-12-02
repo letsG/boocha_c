@@ -2,6 +2,38 @@
   padding-left: 200px;
 }
 
+.project-add .close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+
+.project-add .close:hover {
+  opacity: 1;
+}
+
+.project-add .close:before, .project-add .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+
+.project-add .close:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.project-add .close:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .project-add h1 {
   font-family: Fira Sans;
   font-style: normal;
