@@ -43,15 +43,11 @@ class AddForm extends Component {
                             "insta": "string"
                         },
                         "goal": 0,
-                        "photos": [
-                            "string"
-                        ],
+                        "photos": [],
                         "user": "string",
                         "payment_form": "string",
                         "status": "moderation",
-                        "transactions": [
-                            "string"
-                        ],
+                        "transactions": [],
                         "_id": "string"
                     }
                 axios.post('https://c.boocha.io/api/v1/projects', data)
