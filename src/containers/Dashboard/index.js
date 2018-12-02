@@ -125,7 +125,7 @@ class Dashboard extends Component {
                     </div>
                 </div>
                 <div className="footer">
-                    <span>Как создать проект</span><span>Boocha Journal</span><span>Правила</span>
+                    <span>Как создать проект</span><a href={'https://boocha.io'}><span>Boocha Journal</span></a><span>Правила</span>
                 </div>
             </div>
         )
