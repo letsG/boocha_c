@@ -1,118 +1,57 @@
 .dashboard {
   font-family: "Fira Sans", serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100vh;
-}
-
-.dashboard .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding: 30px;
-}
-
-.dashboard .header .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-right: 5%;
-}
-
-.dashboard .header .buttons a {
-  text-decoration: none;
-  color: black;
-}
-
-.dashboard .header .buttons a span {
-  cursor: pointer;
-  position: relative;
-  -ms-flex-item-align: baseline;
-      align-self: baseline;
-  margin-left: 35px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.dashboard .header .buttons a span i {
-  position: absolute;
-  left: -30px;
-  top: -6px;
-}
-
-.dashboard .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-left: 10%;
-  overflow-y: auto;
-}
-
-.dashboard .content .content-filter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-item-align: start;
+  flex-direction: column;
+  height: 100vh; }
+  .dashboard .header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px; }
+    .dashboard .header .buttons {
+      display: flex;
+      margin-right: 5%; }
+      .dashboard .header .buttons a {
+        text-decoration: none;
+        color: black; }
+        .dashboard .header .buttons a span {
+          cursor: pointer;
+          position: relative;
+          align-self: baseline;
+          margin-left: 35px;
+          font-size: 12px;
+          font-weight: bold; }
+          .dashboard .header .buttons a span i {
+            position: absolute;
+            left: -30px;
+            top: -6px; }
+  .dashboard .content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    overflow-y: auto; }
+    .dashboard .content .content-filter {
+      display: flex;
+      flex-direction: row;
       align-self: flex-start;
-  justify-self: flex-start;
-}
-
-.dashboard .content .content-filter p {
-  margin-left: 20px;
-  font-size: 24pxscroll;
-  color: #011627;
-}
-
-.dashboard .content .cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-wrap: wrap;
+      justify-self: flex-start; }
+      .dashboard .content .content-filter p {
+        margin-left: 20px;
+        font-size: 24pxscroll;
+        color: #011627; }
+    .dashboard .content .cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
       flex-wrap: wrap;
-  min-height: 75%;
-}
-
-.dashboard .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 25% 30px;
-}
-
-.dashboard .footer span {
-  font-weight: normal;
-  line-height: normal;
-  font-size: 12px;
-  color: #011627;
-}
-/*# sourceMappingURL=style.css.map */
+      min-height: 75%; }
+  .dashboard .footer {
+    display: flex;
+    margin-top: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25% 30px; }
+    .dashboard .footer span {
+      font-weight: normal;
+      line-height: normal;
+      font-size: 12px;
+      color: #011627; }

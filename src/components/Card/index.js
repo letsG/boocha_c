@@ -9,7 +9,7 @@ const Card = (props) => {
         <div className="card">
             <h5>{props.data.name}</h5>
             <span>{props.data.description}</span>
-            <div className="progress-bar"> </div>
+            <div className="progress-bar"><div className="progress" style={{width:`${props.index * 20 + '%'}`}}> </div></div>
             <p>{props.data.goal}</p>
             <Link to={`/project${props.index}`}>
                 Подробнее
