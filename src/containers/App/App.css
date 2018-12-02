@@ -12,6 +12,7 @@
   padding-right: 80px;
   -webkit-box-shadow: 3px 4px 10px rgba(1, 22, 39, 0.5);
           box-shadow: 3px 4px 10px rgba(1, 22, 39, 0.5);
+  outline: none;
 }
 
 .Modal h1 {
