@@ -54,7 +54,7 @@ class Dashboard extends Component {
     formData = {
         login: [
             {'id': 'email', 'type': 'text', 'label': 'E-mail', 'className': 'input email', 'required': true},
-            {'id': 'password', 'type': 'text', 'label': 'Пароль', 'className': 'input password', 'required': true},
+            {'id': 'password', 'type': 'password', 'label': 'Пароль', 'className': 'input password', 'required': true},
             {'id': 'register', 'type': 'button', 'value': 'Регистрация', 'className': 'button register', 'required': false},
             {'id': 'login', 'type': 'button', 'value': 'Вход', 'className': 'button login', 'required': false},
         ],
@@ -62,13 +62,13 @@ class Dashboard extends Component {
             {'id': 'firstName', 'type': 'text', 'label': 'Имя', 'className': 'input first-name', 'required': true},
             {'id': 'lastName', 'type': 'text', 'label': 'Фамилия', 'className': 'input last-name', 'required': true},
             {'id': 'email', 'type': 'text', 'label': 'E-mail', 'className': 'input email', 'required': true},
-            {'id': 'password', 'type': 'text', 'label': 'Пароль', 'className': 'input password', 'required': true},
-            {'id': 'confirmPassword', 'type': 'text', 'label': 'Повторно пароль', 'className': 'input password-confirm', 'required': false},
+            {'id': 'password', 'type': 'password', 'label': 'Пароль', 'className': 'input password', 'required': true},
             {'id': 'confirmRegister', 'type': 'button', 'value': 'Зарегестрироваться', 'className': 'button confirm', 'required': false},
         ],
     };
 
     render() {
+        console.log('@@@', localStorage)
         return (
             <div className="dashboard">
                 <Modal
@@ -81,6 +81,7 @@ class Dashboard extends Component {
                     <Form data={this.formData[this.state.form]}
                           onRegisterClick={this.onRegister}
                           value={this.state.formData}
+                          closeModal={this.closeModal}
                     />
                 </Modal>
                 <div className="header">
